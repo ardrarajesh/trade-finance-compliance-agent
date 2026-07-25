@@ -30,9 +30,9 @@ Thumbs.db
 .vscode/
 .idea/
 
-# ---- Project: generated data & outputs (keep the generators, not the outputs) ----
-data/synthetic/*.pdf
-data/synthetic/*.png
-data/synthetic/*.json
+# ---- Project outputs ----
+# We intentionally COMMIT a small synthetic sample under data/synthetic/ so the
+# repo is explorable without running the generator. Bulk/large runs go to
+# outputs/ (gitignored). Regenerate the sample any time with scripts/generate_data.py.
 outputs/
 *.log
