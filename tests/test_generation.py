@@ -30,6 +30,16 @@ def test_port_mismatch_breaks_discharge_port():
     )
 
 
+def test_transshipment_violation():
+    case = build_case(seed=1, discrepancies=[Discrepancy.TRANSSHIPMENT_VIOLATION])
+    # 1. The LC forbids transshipment...
+    assert case.letter_of_credit.transshipment_allowed is False
+    # 2. ...yet the Bill of Lading shows it happened (the evidence).
+    assert "transship" in case.bill_of_lading.goods_description.lower()
+    # 3. The discrepancy was labelled for later evaluation.
+    assert "TRANSSHIPMENT_VIOLATION" in case.injected_discrepancies
+
+
 def test_generation_is_reproducible():
     a = build_case(seed=7)
     b = build_case(seed=7)

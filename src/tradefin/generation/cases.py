@@ -44,6 +44,7 @@ class Discrepancy(str, Enum):
     LATE_SHIPMENT = "LATE_SHIPMENT"                   # shipped after latest_shipment_date
     PORT_MISMATCH = "PORT_MISMATCH"                   # BoL ports != LC ports
     BENEFICIARY_NAME_MISMATCH = "BENEFICIARY_NAME_MISMATCH"
+    TRANSSHIPMENT_VIOLATION = "TRANSSHIPMENT_VIOLATION"
 
 
 # A few plausible goods so cases look realistic.
@@ -180,6 +181,11 @@ def _inject_port_mismatch(case: ShipmentCase) -> None:
 def _inject_beneficiary_name_mismatch(case: ShipmentCase) -> None:
     case.commercial_invoice.seller.name = case.commercial_invoice.seller.name + " International"
 
+def _inject_transshipment_violation(case: ShipmentCase) -> None:
+    # LC already forbids transshipment in the compliant baseline; the violation
+    # is that the BoL now shows transshipment actually happened.
+    case.letter_of_credit.transshipment_allowed = False
+    case.bill_of_lading.goods_description += " (transshipped at Singapore)"
 
 _MUTATORS = {
     Discrepancy.AMOUNT_OVER_LC: _inject_amount_over_lc,
@@ -188,6 +194,7 @@ _MUTATORS = {
     Discrepancy.LATE_SHIPMENT: _inject_late_shipment,
     Discrepancy.PORT_MISMATCH: _inject_port_mismatch,
     Discrepancy.BENEFICIARY_NAME_MISMATCH: _inject_beneficiary_name_mismatch,
+    Discrepancy.TRANSSHIPMENT_VIOLATION: _inject_transshipment_violation,
 }
 
 
