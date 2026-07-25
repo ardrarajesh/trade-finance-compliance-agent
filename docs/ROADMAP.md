@@ -7,7 +7,7 @@ Each module is a coherent unit ending in a git commit, so the history reads like
 | 0 | Foundations & scaffold | ✅ done | Repo structure, env, git |
 | 1 | Synthetic data generator | ✅ done | Generate realistic LC / Invoice / BoL PDFs |
 | 2 | Ingestion layer | ✅ done | PDF parsing + doc-type detection |
-| 3 | LLM setup (local) | ⬜ todo | Provider-agnostic LLM client (Ollama) |
+| 3 | LLM setup (local) | ✅ done | Provider-agnostic LLM client (Ollama) |
 | 4 | Extraction agent | ⬜ todo | Pydantic-schema structured extraction + OCR fallback |
 | 5 | Compliance engine | ⬜ todo | Rules-as-code + RAG over UCP 600 with citations |
 | 6 | Orchestration | ⬜ todo | LangGraph state machine, retries, aggregation |

@@ -11,6 +11,9 @@ faker>=24.0           # realistic fake names, dates, addresses
 # Ingestion (Module 2)
 pdfplumber>=0.11      # extract embedded text (and layout) from PDFs
 
+# LLM layer (Module 3)
+ollama>=0.3           # thin client for a local Ollama server
+
 # Config & environment
 python-dotenv>=1.0
 
