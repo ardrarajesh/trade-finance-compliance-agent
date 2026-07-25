@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tradefin-compliance"
+version = "0.1.0"
+description = "Agentic Trade-Finance Document Compliance Checker (LC / Invoice / Bill of Lading vs UCP 600)"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Ardra K R" }]
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

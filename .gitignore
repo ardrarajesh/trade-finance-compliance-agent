@@ -1,0 +1,38 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Virtual envs ----
+.venv/
+venv/
+env/
+
+# ---- Secrets / config ----
+.env
+*.key
+
+# ---- Local models / large artifacts ----
+models/
+*.gguf
+*.bin
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Editor ----
+.vscode/
+.idea/
+
+# ---- Project: generated data & outputs (keep the generators, not the outputs) ----
+data/synthetic/*.pdf
+data/synthetic/*.png
+data/synthetic/*.json
+outputs/
+*.log

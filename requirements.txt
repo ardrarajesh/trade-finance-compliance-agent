@@ -1,0 +1,15 @@
+# Core (Module 0-1). We add more per module so you understand every dependency.
+# Pin loosely for a portfolio project; we can freeze exact versions at the end.
+
+# Data models & validation (used everywhere for structured output)
+pydantic>=2.6
+
+# Synthetic document generation (Module 1)
+reportlab>=4.0        # generate realistic PDF documents
+faker>=24.0           # realistic fake names, dates, addresses
+
+# Config & environment
+python-dotenv>=1.0
+
+# Dev / quality
+pytest>=8.0
