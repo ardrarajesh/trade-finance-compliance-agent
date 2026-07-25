@@ -3,6 +3,7 @@
 from tradefin.ingestion.reader import (
     DocumentType,
     IngestedDocument,
+    classification_confidence,
     detect_document_type,
     extract_text,
     ingest,
@@ -12,6 +13,7 @@ from tradefin.ingestion.reader import (
 __all__ = [
     "DocumentType",
     "IngestedDocument",
+    "classification_confidence",
     "detect_document_type",
     "extract_text",
     "ingest",

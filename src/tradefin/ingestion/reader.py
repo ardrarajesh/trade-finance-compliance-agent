@@ -75,6 +75,7 @@ class IngestedDocument(BaseModel):
     text: str
     num_pages: int
     needs_ocr: bool
+    classification_score: int
 
 
 def extract_text(pdf_path: Path) -> tuple[str, int]:
@@ -107,7 +108,7 @@ def ingest(pdf_path: Path) -> IngestedDocument:
     pdf_path = Path(pdf_path)
     text, num_pages = extract_text(pdf_path)
     needs_ocr = len(text) < _MIN_TEXT_CHARS
-
+    score = classification_confidence(text)
     # If we could not read text, we cannot classify yet -> UNKNOWN until OCR.
     doc_type = DocumentType.UNKNOWN if needs_ocr else detect_document_type(text)
 
@@ -117,6 +118,7 @@ def ingest(pdf_path: Path) -> IngestedDocument:
         text=text,
         num_pages=num_pages,
         needs_ocr=needs_ocr,
+        classification_score=score,
     )
 
 
@@ -124,3 +126,13 @@ def ingest_directory(case_dir: Path) -> list[IngestedDocument]:
     """Ingest every PDF in a folder (e.g. one case's three documents)."""
     case_dir = Path(case_dir)
     return [ingest(p) for p in sorted(case_dir.glob("*.pdf"))]
+
+def classification_confidence(text: str) -> int:
+    """Return the winning keyword score (0 = matched nothing)."""
+    best_score = 0
+    haystack=text.lower()
+    for doc_type, keywords in _TYPE_KEYWORDS.items():
+        score = sum(weight for phrase, weight in keywords if phrase in haystack)
+        if score > best_score:
+            best_score = score
+    return best_score

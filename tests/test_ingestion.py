@@ -2,7 +2,13 @@
 
 from tradefin.generation import build_case
 from tradefin.generation.render import render_case
-from tradefin.ingestion import DocumentType, detect_document_type, ingest, ingest_directory
+from tradefin.ingestion import (
+    DocumentType,
+    classification_confidence,
+    detect_document_type,
+    ingest,
+    ingest_directory,
+)
 
 
 def test_detect_document_type_from_text():
@@ -38,3 +44,18 @@ def test_ingest_finds_key_fields_in_text(tmp_path):
     lc_doc = ingest(case_dir / "letter_of_credit.pdf")
     # The LC number should survive the object -> PDF -> text round trip.
     assert case.letter_of_credit.lc_number in lc_doc.text
+
+
+def test_classification_confidence_scores():
+    # A clear Letter of Credit should score above zero...
+    assert classification_confidence("IRREVOCABLE DOCUMENTARY CREDIT, issuing bank") > 0
+    # ...and unrelated text should score exactly zero.
+    assert classification_confidence("the quick brown fox") == 0
+
+
+def test_ingest_populates_classification_score(tmp_path):
+    case = build_case(seed=123)
+    case_dir = render_case(case, tmp_path)
+    lc_doc = ingest(case_dir / "letter_of_credit.pdf")
+    # A confidently-classified document carries a positive score.
+    assert lc_doc.classification_score > 0
