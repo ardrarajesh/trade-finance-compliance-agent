@@ -1,0 +1,85 @@
+{
+  "case_id": "CASE-66238",
+  "letter_of_credit": {
+    "lc_number": "LC-66238",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Lopez-Hahn",
+      "address": "70186 Ellison Ville",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "White-Johnston",
+      "address": "3531 Kelly Cliff",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "86100",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Organic Arabica coffee beans (60kg bags)",
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Rotterdam, Netherlands",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-66238",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-66238",
+    "seller": {
+      "name": "White-Johnston",
+      "address": "3531 Kelly Cliff",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Lopez-Hahn",
+      "address": "70186 Ellison Ville",
+      "country": "USA"
+    },
+    "goods_description": "Organic Arabica coffee beans (60kg bags)",
+    "quantity": 200,
+    "unit_price": {
+      "amount": "410.00",
+      "currency": "EUR"
+    },
+    "total_amount": {
+      "amount": "82000.00",
+      "currency": "EUR"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-66238",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "White-Johnston",
+      "address": "3531 Kelly Cliff",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Lopez-Hahn",
+      "address": "70186 Ellison Ville",
+      "country": "USA"
+    },
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Felixstowe, UK",
+    "goods_description": "Organic Arabica coffee beans (60kg bags)",
+    "number_of_packages": 4,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": [
+    "CURRENCY_MISMATCH",
+    "PORT_MISMATCH"
+  ]
+}

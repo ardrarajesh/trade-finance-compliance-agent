@@ -1,0 +1,82 @@
+{
+  "case_id": "CASE-29257",
+  "letter_of_credit": {
+    "lc_number": "LC-29257",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Banks and Sons",
+      "address": "883 Williams Mills Suite 812",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Bullock Group",
+      "address": "389 John Junctions",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "26775",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Stainless steel kitchen sinks",
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Santos, Brazil",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-29257",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-29257",
+    "seller": {
+      "name": "Bullock Group",
+      "address": "389 John Junctions",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Banks and Sons",
+      "address": "883 Williams Mills Suite 812",
+      "country": "USA"
+    },
+    "goods_description": "Stainless steel kitchen sinks",
+    "quantity": 300,
+    "unit_price": {
+      "amount": "85.00",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "25500.00",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-29257",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Bullock Group",
+      "address": "389 John Junctions",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Banks and Sons",
+      "address": "883 Williams Mills Suite 812",
+      "country": "USA"
+    },
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Santos, Brazil",
+    "goods_description": "Stainless steel kitchen sinks",
+    "number_of_packages": 6,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": []
+}

@@ -1,0 +1,82 @@
+{
+  "case_id": "CASE-12281",
+  "letter_of_credit": {
+    "lc_number": "LC-12281",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Herrera, Crawford and Morgan",
+      "address": "345 Peter Divide Apt. 192",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Harris PLC",
+      "address": "9259 Timothy Estates Suite 970",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "31920",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Basmati rice, 25kg sacks",
+    "port_of_loading": "Busan, South Korea",
+    "port_of_discharge": "Long Beach, USA",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-12281",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-12281",
+    "seller": {
+      "name": "Harris PLC",
+      "address": "9259 Timothy Estates Suite 970",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Herrera, Crawford and Morgan",
+      "address": "345 Peter Divide Apt. 192",
+      "country": "USA"
+    },
+    "goods_description": "Basmati rice, 25kg sacks",
+    "quantity": 800,
+    "unit_price": {
+      "amount": "38.00",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "30400.00",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-12281",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Harris PLC",
+      "address": "9259 Timothy Estates Suite 970",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Herrera, Crawford and Morgan",
+      "address": "345 Peter Divide Apt. 192",
+      "country": "USA"
+    },
+    "port_of_loading": "Busan, South Korea",
+    "port_of_discharge": "Long Beach, USA",
+    "goods_description": "Basmati rice, 25kg sacks",
+    "number_of_packages": 16,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": []
+}

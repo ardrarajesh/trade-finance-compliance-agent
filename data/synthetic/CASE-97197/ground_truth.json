@@ -1,0 +1,82 @@
+{
+  "case_id": "CASE-97197",
+  "letter_of_credit": {
+    "lc_number": "LC-97197",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Williams, Burton and Manning",
+      "address": "7570 Cheryl Mall Apt. 847",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Frye Group",
+      "address": "365 Stephens Station Apt. 329",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "13125",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Cotton bath towels, 500 GSM",
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Rotterdam, Netherlands",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-97197",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-97197",
+    "seller": {
+      "name": "Frye Group",
+      "address": "365 Stephens Station Apt. 329",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Williams, Burton and Manning",
+      "address": "7570 Cheryl Mall Apt. 847",
+      "country": "USA"
+    },
+    "goods_description": "Cotton bath towels, 500 GSM",
+    "quantity": 1000,
+    "unit_price": {
+      "amount": "12.50",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "12500.00",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-97197",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Frye Group",
+      "address": "365 Stephens Station Apt. 329",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Williams, Burton and Manning",
+      "address": "7570 Cheryl Mall Apt. 847",
+      "country": "USA"
+    },
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Rotterdam, Netherlands",
+    "goods_description": "Cotton bath towels, 500 GSM",
+    "number_of_packages": 20,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": []
+}

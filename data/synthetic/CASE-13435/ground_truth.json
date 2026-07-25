@@ -1,0 +1,85 @@
+{
+  "case_id": "CASE-13435",
+  "letter_of_credit": {
+    "lc_number": "LC-13435",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Newman PLC",
+      "address": "38274 Jesse Turnpike Apt. 398",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Jones, Bradshaw and Cook",
+      "address": "589 Johnson Garden",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "26775",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Stainless steel kitchen sinks",
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Santos, Brazil",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-13435",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-13435",
+    "seller": {
+      "name": "Jones, Bradshaw and Cook",
+      "address": "589 Johnson Garden",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Newman PLC",
+      "address": "38274 Jesse Turnpike Apt. 398",
+      "country": "USA"
+    },
+    "goods_description": "Stainless steel kitchen sinks",
+    "quantity": 300,
+    "unit_price": {
+      "amount": "102.64",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "30791.25",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-13435",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Jones, Bradshaw and Cook",
+      "address": "589 Johnson Garden",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Newman PLC",
+      "address": "38274 Jesse Turnpike Apt. 398",
+      "country": "USA"
+    },
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Felixstowe, UK",
+    "goods_description": "Stainless steel kitchen sinks",
+    "number_of_packages": 6,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": [
+    "AMOUNT_OVER_LC",
+    "PORT_MISMATCH"
+  ]
+}

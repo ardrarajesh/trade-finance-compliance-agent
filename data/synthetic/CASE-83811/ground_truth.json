@@ -1,0 +1,82 @@
+{
+  "case_id": "CASE-83811",
+  "letter_of_credit": {
+    "lc_number": "LC-83811",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "Hall PLC",
+      "address": "806 Michael Place",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Sutton PLC",
+      "address": "1503 Summers Inlet",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "26775",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Stainless steel kitchen sinks",
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Rotterdam, Netherlands",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-83811",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-83811",
+    "seller": {
+      "name": "Sutton PLC",
+      "address": "1503 Summers Inlet",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "Hall PLC",
+      "address": "806 Michael Place",
+      "country": "USA"
+    },
+    "goods_description": "Stainless steel kitchen sinks",
+    "quantity": 300,
+    "unit_price": {
+      "amount": "85.00",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "25500.00",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-83811",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Sutton PLC",
+      "address": "1503 Summers Inlet",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "Hall PLC",
+      "address": "806 Michael Place",
+      "country": "USA"
+    },
+    "port_of_loading": "Shanghai, China",
+    "port_of_discharge": "Rotterdam, Netherlands",
+    "goods_description": "Stainless steel kitchen sinks",
+    "number_of_packages": 6,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": []
+}

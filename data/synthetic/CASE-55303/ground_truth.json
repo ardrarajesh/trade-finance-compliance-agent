@@ -1,0 +1,82 @@
+{
+  "case_id": "CASE-55303",
+  "letter_of_credit": {
+    "lc_number": "LC-55303",
+    "issue_date": "2026-01-10",
+    "expiry_date": "2026-03-12",
+    "latest_shipment_date": "2026-02-19",
+    "applicant": {
+      "name": "York, Boyd and Sanchez",
+      "address": "0218 Smith Forges Apt. 394",
+      "country": "USA"
+    },
+    "beneficiary": {
+      "name": "Thomas, Gilmore and Thomas",
+      "address": "706 David Loop Suite 974",
+      "country": "India"
+    },
+    "issuing_bank": {
+      "name": "First Global Bank",
+      "address": "1 Finance Plaza",
+      "country": "USA"
+    },
+    "amount": {
+      "amount": "26775",
+      "currency": "USD"
+    },
+    "tolerance_pct": "5",
+    "goods_description": "Stainless steel kitchen sinks",
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Santos, Brazil",
+    "incoterm": "CIF",
+    "partial_shipment_allowed": false,
+    "transshipment_allowed": false
+  },
+  "commercial_invoice": {
+    "invoice_number": "INV-55303",
+    "invoice_date": "2026-02-14",
+    "lc_number": "LC-55303",
+    "seller": {
+      "name": "Thomas, Gilmore and Thomas",
+      "address": "706 David Loop Suite 974",
+      "country": "India"
+    },
+    "buyer": {
+      "name": "York, Boyd and Sanchez",
+      "address": "0218 Smith Forges Apt. 394",
+      "country": "USA"
+    },
+    "goods_description": "Stainless steel kitchen sinks",
+    "quantity": 300,
+    "unit_price": {
+      "amount": "85.00",
+      "currency": "USD"
+    },
+    "total_amount": {
+      "amount": "25500.00",
+      "currency": "USD"
+    },
+    "incoterm": "CIF"
+  },
+  "bill_of_lading": {
+    "bl_number": "BL-55303",
+    "shipment_date": "2026-02-14",
+    "shipper": {
+      "name": "Thomas, Gilmore and Thomas",
+      "address": "706 David Loop Suite 974",
+      "country": "India"
+    },
+    "consignee": {
+      "name": "York, Boyd and Sanchez",
+      "address": "0218 Smith Forges Apt. 394",
+      "country": "USA"
+    },
+    "port_of_loading": "Hamburg, Germany",
+    "port_of_discharge": "Santos, Brazil",
+    "goods_description": "Stainless steel kitchen sinks",
+    "number_of_packages": 6,
+    "clean_on_board": true,
+    "freight_prepaid": true
+  },
+  "injected_discrepancies": []
+}
