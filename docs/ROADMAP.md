@@ -8,7 +8,7 @@ Each module is a coherent unit ending in a git commit, so the history reads like
 | 1 | Synthetic data generator | ✅ done | Generate realistic LC / Invoice / BoL PDFs |
 | 2 | Ingestion layer | ✅ done | PDF parsing + doc-type detection |
 | 3 | LLM setup (local) | ✅ done | Provider-agnostic LLM client (Ollama) |
-| 4 | Extraction agent | ⬜ todo | Pydantic-schema structured extraction + OCR fallback |
+| 4 | Extraction agent | ✅ done | Schema-driven structured extraction (validated + retry). OCR fallback deferred to a later scanned-doc step. |
 | 5 | Compliance engine | ⬜ todo | Rules-as-code + RAG over UCP 600 with citations |
 | 6 | Orchestration | ⬜ todo | LangGraph state machine, retries, aggregation |
 | 7 | API + UI + Docker | ⬜ todo | FastAPI + Streamlit + container |
