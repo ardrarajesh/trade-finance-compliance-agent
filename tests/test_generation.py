@@ -44,3 +44,15 @@ def test_generation_is_reproducible():
     a = build_case(seed=7)
     b = build_case(seed=7)
     assert a.model_dump(mode="json") == b.model_dump(mode="json")
+
+
+def test_documents_own_independent_party_objects():
+    # Regression: the invoice's seller must NOT be the same object as the LC's
+    # beneficiary, or mutating one silently changes the other (aliasing bug).
+    case = build_case(seed=7)
+    assert case.commercial_invoice.seller is not case.letter_of_credit.beneficiary
+
+
+def test_beneficiary_mismatch_is_a_real_mismatch():
+    case = build_case(seed=5, discrepancies=[Discrepancy.BENEFICIARY_NAME_MISMATCH])
+    assert case.commercial_invoice.seller.name != case.letter_of_credit.beneficiary.name

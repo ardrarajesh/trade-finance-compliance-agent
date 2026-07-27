@@ -1,0 +1,22 @@
+{
+  "art_14": {
+    "article": "UCP 600 Article 14",
+    "title": "Standard for Examination of Documents",
+    "summary": "Banks examine a presentation on its face to decide whether the documents appear to comply. Data in a document need not be identical to, but must not conflict with, data in any other stipulated document or the credit."
+  },
+  "art_18": {
+    "article": "UCP 600 Article 18",
+    "title": "Commercial Invoice",
+    "summary": "The commercial invoice must appear to be issued by the beneficiary, be made out in the name of the applicant, and be in the same currency as the credit. Its description of the goods must correspond with that shown in the credit. A bank may treat as compliant an invoice for an amount in excess of the credit only within any stated tolerance."
+  },
+  "art_20": {
+    "article": "UCP 600 Article 20",
+    "title": "Bill of Lading",
+    "summary": "A bill of lading must indicate shipment from the port of loading to the port of discharge stated in the credit, show the goods have been shipped on board on a dated basis, and honour the credit's terms on transshipment. Shipment must not be dated later than any latest shipment date in the credit."
+  },
+  "art_30": {
+    "article": "UCP 600 Article 30",
+    "title": "Tolerance in Credit Amount, Quantity and Unit Prices",
+    "summary": "A tolerance in the credit amount is permitted only to the extent the credit expressly allows it (for example a stated percentage). Absent an allowed tolerance, the amount drawn and invoiced must not exceed the amount of the credit."
+  }
+}

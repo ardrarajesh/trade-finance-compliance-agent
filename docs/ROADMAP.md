@@ -9,7 +9,8 @@ Each module is a coherent unit ending in a git commit, so the history reads like
 | 2 | Ingestion layer | ✅ done | PDF parsing + doc-type detection |
 | 3 | LLM setup (local) | ✅ done | Provider-agnostic LLM client (Ollama) |
 | 4 | Extraction agent | ✅ done | Schema-driven structured extraction (validated + retry). OCR fallback deferred to a later scanned-doc step. |
-| 5 | Compliance engine | ⬜ todo | Rules-as-code + RAG over UCP 600 with citations |
+| 5 | Compliance engine | ✅ done | Deterministic rules-as-code + UCP 600 citations |
+| 5b | RAG over UCP 600 | ⬜ todo | Semantic retrieval over the rulebook to enrich/justify findings |
 | 6 | Orchestration | ⬜ todo | LangGraph state machine, retries, aggregation |
 | 7 | API + UI + Docker | ⬜ todo | FastAPI + Streamlit + container |
 | 8 | Evaluation & polish | ⬜ todo | Test set, accuracy metrics, portfolio README |

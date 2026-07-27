@@ -113,12 +113,17 @@ def build_compliant_case(seed: int) -> ShipmentCase:
         transshipment_allowed=False,
     )
 
+    # Each document is an independent record. The SAME company appears on all
+    # three, but as its OWN copy of the data -- otherwise mutating a party on one
+    # document would silently change it on the others (shared-reference bug), and
+    # an injected mismatch would not actually be a mismatch. `.model_copy()`
+    # gives each document its own Party objects.
     invoice = CommercialInvoice(
         invoice_number=f"INV-{seed:05d}",
         invoice_date=shipment,
         lc_number=lc.lc_number,
-        seller=beneficiary,
-        buyer=applicant,
+        seller=beneficiary.model_copy(),
+        buyer=applicant.model_copy(),
         goods_description=description,
         quantity=quantity,
         unit_price=Money(amount=unit_price, currency=currency),
@@ -129,8 +134,8 @@ def build_compliant_case(seed: int) -> ShipmentCase:
     bol = BillOfLading(
         bl_number=f"BL-{seed:05d}",
         shipment_date=shipment,
-        shipper=beneficiary,
-        consignee=applicant,
+        shipper=beneficiary.model_copy(),
+        consignee=applicant.model_copy(),
         port_of_loading=pol,
         port_of_discharge=pod,
         goods_description=description,
