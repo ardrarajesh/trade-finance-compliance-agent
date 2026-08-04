@@ -14,6 +14,16 @@ pdfplumber>=0.11      # extract embedded text (and layout) from PDFs
 # LLM layer (Module 3)
 ollama>=0.3           # thin client for a local Ollama server
 
+# Orchestration (Module 6)
+langgraph>=0.2        # state-machine orchestration of the pipeline
+
+# API + UI (Module 7)
+fastapi>=0.110        # REST service
+uvicorn>=0.29         # ASGI server to run FastAPI
+python-multipart>=0.0.9  # file uploads for FastAPI
+streamlit>=1.33       # upload UI (client of the API)
+requests>=2.31        # UI -> API HTTP calls
+
 # Config & environment
 python-dotenv>=1.0
 
