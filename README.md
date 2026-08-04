@@ -34,12 +34,52 @@ Upload → Ingestion (PDF text / OCR) → Extraction Agent (LLM → structured J
 
 ## Quickstart
 
-> Full instructions land as each module is completed.
+### 1. Setup
 
 ```bash
 conda activate tradefin
 pip install -r requirements.txt
 pip install -e .
+pytest -q                     # run the test suite
+```
+
+### 2. Generate synthetic documents
+
+```bash
+python scripts/generate_data.py --n 8 --out data/synthetic
+```
+
+### 3. See a compliance audit report (no LLM / RAM needed)
+
+The compliance engine is deterministic, so this always works:
+
+```bash
+python scripts/compliance_demo.py --seed 5 --discrepancies AMOUNT_OVER_LC PORT_MISMATCH
+```
+
+### 4. Run the full app (API + UI)
+
+Terminal 1 — the API:
+
+```bash
+uvicorn tradefin.api.app:app --reload
+```
+
+Terminal 2 — the UI (talks to the API):
+
+```bash
+streamlit run ui/streamlit_app.py
+```
+
+Then open the UI at http://localhost:8501 and the API docs at http://localhost:8000/docs.
+The pipeline uses a local Ollama model by default — set `OLLAMA_MODEL=llama3.2:1b`
+on low-RAM machines, or `LLM_PROVIDER=mock` to run without a model.
+
+### 5. Run everything in Docker
+
+```bash
+docker compose up --build
+docker compose exec ollama ollama pull llama3.2:3b   # one-time model pull
 ```
 
 ## Roadmap & progress

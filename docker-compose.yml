@@ -1,0 +1,39 @@
+# Three-service stack: a local LLM (ollama), the API, and the UI.
+# Bring it up with:  docker compose up --build
+#
+# Then pull a model into the running ollama service (one time):
+#   docker compose exec ollama ollama pull llama3.2:3b
+#
+# UI:  http://localhost:8501     API docs:  http://localhost:8000/docs
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      LLM_PROVIDER: ollama
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: llama3.2:3b
+    depends_on:
+      - ollama
+
+  ui:
+    build: .
+    command: streamlit run ui/streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+
+volumes:
+  ollama_models:

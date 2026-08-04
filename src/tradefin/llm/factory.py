@@ -4,8 +4,9 @@ Choose an LLM backend from configuration (environment variables).
 Everything downstream calls `get_llm()` and receives *some* LLMClient. Whether
 that is Ollama or the mock is a config decision, not a code decision. Set:
 
-    LLM_PROVIDER = ollama | mock      (default: ollama)
-    OLLAMA_MODEL = llama3.2:3b        (default)
+    LLM_PROVIDER = ollama | mock            (default: ollama)
+    OLLAMA_MODEL = llama3.2:3b              (default)
+    OLLAMA_HOST  = http://ollama:11434      (optional; e.g. in Docker compose)
 """
 
 from __future__ import annotations
@@ -21,7 +22,10 @@ def get_llm(provider: str | None = None) -> LLMClient:
     provider = (provider or os.getenv("LLM_PROVIDER", "ollama")).lower()
 
     if provider == "ollama":
-        return OllamaClient(model=os.getenv("OLLAMA_MODEL", DEFAULT_MODEL))
+        return OllamaClient(
+            model=os.getenv("OLLAMA_MODEL", DEFAULT_MODEL),
+            host=os.getenv("OLLAMA_HOST"),  # None -> ollama's default localhost
+        )
     if provider == "mock":
         return MockLLMClient(response="(mock response)")
 

@@ -1,0 +1,15 @@
+# Keep the image small and builds fast.
+.git
+.gitignore
+.gitattributes
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+notebooks/
+tests/
+outputs/
+*.log
+*.egg-info/
+data/synthetic/
