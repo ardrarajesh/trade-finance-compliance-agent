@@ -82,6 +82,22 @@ docker compose up --build
 docker compose exec ollama ollama pull llama3.2:3b   # one-time model pull
 ```
 
+## Evaluation
+
+The discrepancy check is evaluated as a multi-label classification task against
+the generator's ground-truth labels:
+
+```bash
+python scripts/evaluate.py --n 100
+```
+
+On 100 synthetic cases the deterministic compliance engine scores **1.00
+precision / recall / F1** across all seven discrepancy types. Note what this
+does and does not show: it confirms the engine's *rules correctly implement the
+discrepancy definitions* when given correctly-read documents. Measuring how
+accurately a live LLM extracts fields from the PDFs is a separate evaluation
+(it requires a running model) and is intentionally kept distinct.
+
 ## Roadmap & progress
 
 See [docs/ROADMAP.md](docs/ROADMAP.md). Each module is a self-contained, reviewable commit.

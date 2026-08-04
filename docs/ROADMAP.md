@@ -13,7 +13,7 @@ Each module is a coherent unit ending in a git commit, so the history reads like
 | 5b | RAG over UCP 600 | ⬜ todo | Semantic retrieval over the rulebook to enrich/justify findings |
 | 6 | Orchestration | ✅ done | LangGraph state machine (ingest→extract→branch→compliance) |
 | 7 | API + UI + Docker | ✅ done | FastAPI + Streamlit + docker-compose (api/ui/ollama) |
-| 8 | Evaluation & polish | ⬜ todo | Test set, accuracy metrics, portfolio README |
+| 8 | Evaluation | ✅ done | Multi-label precision/recall/F1 harness + eval script |
 
 ## Glossary (trade-finance terms you'll be able to explain in interviews)
 
